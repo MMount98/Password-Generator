@@ -35,10 +35,14 @@ to quickly generate a brand new password that is custimizable to what they need 
 The following was the steps I wrote out in-order to approach this project from a logical stand point using Pseudo Code :
 
     1. Build Arrays containing the diffrent characters to build password with
-    2. Start function with using Alerts, Prompts, and Conforim methods to get the drop down box and collect the users requirements for the password
-    3. Use If statements with the boolean values stored in the declared varibles to check which requirements the user would like the password to have
+    2. Start function with using Alerts, Prompts, and Conforim methods to get the drop down box and
+    collect the users requirements for the password
+    3. Use If statements with the boolean values stored in the declared varibles to check which
+    requirements the user would like the password to have
     4. In said If statements, use the, ".concat" method to join selected arrays to merge with the random array
-    5. Set Up a for loop with the condition of randomly generating a number and using, "Math.floor" and "Math.random", to pick an index value from the random array. Stopping once the index length of the random array is met
+    5. Set Up a for loop with the condition of randomly generating a number and using,
+    "Math.floor" and "Math.random", to pick an index value from the random array. Stopping once
+    the index length of the random array is met
     6. Placing the pulled values from the random array into a new varible, newPassword, and appending it to the DOM
 
 ## Challenges
