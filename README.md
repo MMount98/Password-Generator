@@ -43,4 +43,12 @@ The following was the steps I wrote out in-order to approach this project from a
 
 ## Challenges
 
-One of the biggest obstical for me during this project was the, "How to" when it came to pieceing it all together.
+One of the bigger challenges I had well working on this project was the, "how" on actually putting it all together in the for loop. Altough it seems to make sense now, in the moment I became very stuck on getting it to actually build the new string to append to the DOM. I kept running into a bug where the value saved from the for loop was just a single index number and the value of it. It took some reserch to find the solution was in using the, "+=" operator to attach the index value from the, "Math.floor(Math.random() \* array.legth)" and using it as the indexing number.
+
+## Take Away
+
+Using Pseudo Code really helped me visual and tackle the problems head out. Allowing for me to focus on the smaller pieces of the problem didn't make it seem as overwhelming after acheving the smaller wins. In fact, it made the overwhelming challenge appear easy to tackle. I plan on taking the process of Pseudo Coding in the the rest of my projects going forward as it made for a soother experience when coding.
+
+## Links
+
+![The Live Site](https://mmount98.github.io/Password-Generator/)
