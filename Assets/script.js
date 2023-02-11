@@ -95,7 +95,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   //Where the desired arrays are stored
   var randomArray = [];
-  var genPassword = " ";
+  var newPassword = " ";
   //Starting the series of prompt quesitons
   var characterLength = prompt(
     "How many Characters would you like to include in your password? \n (Min legenth is 8 and the Max legenth is 128)"
@@ -139,17 +139,28 @@ function writePassword() {
     randomArray = randomArray.concat(specialCharater);
   }
 
-  for (var i = 0; i < parseFloat(characterLength); i++) {
-    //Generating a random number based of the index length of random array
-    var genPassword = Math.floor(Math.random() * randomArray.length);
-    genPassword = genPassword + "a";
+  //Checks to See if Any Properties where selected and if not, to excute the program from the start
+  if (
+    lowerCaseCheck === false &&
+    upperCaseCheck === false &&
+    numberCheck === false &&
+    specialCharaterCheck === false
+  ) {
+    alert("No properties where selected, please try again!");
+    return writePassword();
   }
 
-  console.log(genPassword);
+  //For loop to output the genorated password
+  for (var i = 0; i < parseFloat(characterLength); i++) {
+    //Generating a random number based of the index length of random array
+    var randomIndex = Math.floor(Math.random() * randomArray.length);
+    //Building a string of values from randomArray and storing it in the Varible newPassword
+    newPassword += randomArray[randomIndex];
+  }
 
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = newPassword;
 }
 
 // Add event listener to generate button
