@@ -89,23 +89,25 @@ var specialCharater = [
   "~",
 ];
 
-// Get references to the #generate element   lowercase, uppercase, numeric, and/or special characters
+// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
+  //Where the desired arrays are stored
   var randomArray = [];
-
+  var genPassword = " ";
+  //Starting the series of prompt quesitons
   var characterLength = prompt(
     "How many Characters would you like to include in your password? \n (Min legenth is 8 and the Max legenth is 128)"
   );
-  
+  //checking to make sure the characterLength was given a valid input
   if (parseFloat(characterLength) < 8 || parseFloat(characterLength) > 128) {
     alert("Use a number between 8 and 128");
     var characterLength = prompt(
       "How many Characters would you like to include in your password? \n (Min legenth is 8 and the Max legenth is 128)"
     );
   }
+  // If statements to Build desired characters in Random Array
 
   var lowerCaseCheck = confirm(
     "Would you like to include Lower Case characters?"
@@ -137,27 +139,14 @@ function writePassword() {
     randomArray = randomArray.concat(specialCharater);
   }
 
-  console.log(randomArray);
+  for (var i = 0; i < parseFloat(characterLength); i++) {
+    //Generating a random number based of the index length of random array
+    var genPassword = Math.floor(Math.random() * randomArray.length);
+    genPassword = genPassword + "a";
+  }
 
+  console.log(genPassword);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
