@@ -100,13 +100,12 @@ function writePassword() {
   var characterLength = prompt(
     "How many Characters would you like to include in your password? \n (Min legenth is 8 and the Max legenth is 128)"
   );
-  //checking to make sure the characterLength was given a valid input
+  //checking to make sure the users input is a vaild number
   if (parseFloat(characterLength) < 8 || parseFloat(characterLength) > 128) {
     alert("Use a number between 8 and 128");
-    var characterLength = prompt(
-      "How many Characters would you like to include in your password? \n (Min legenth is 8 and the Max legenth is 128)"
-    );
+    return writePassword();
   }
+
   // If statements to Build desired characters in Random Array
 
   var lowerCaseCheck = confirm(
